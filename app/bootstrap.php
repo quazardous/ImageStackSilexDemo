@@ -23,6 +23,7 @@ $app->register(new ImageStackProvider(), [
         'web' => [
             'driver' => 'http',
             'root_url' => 'https://static.pexels.com/photos/',
+            'intercept_exception' => true,
         ],
         // we create a backend that can cache photo from pexels.com locally
         'web_cache' => [
