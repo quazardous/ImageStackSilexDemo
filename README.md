@@ -49,7 +49,7 @@ Other will trigger `404`.
 
 You can purge cached files removing `var/cache/pexels` (cache) and `web\img\pexels` (thumbnails).
 
-Take a look at `app/bootstrap.php` (or here [SilexImageStack](https://github.com/quazardous/SilexImageStack)) to see it done what is done with a few config lines in the **Silex** bootstrap.
+Take a look at `app/bootstrap.php` (or here [SilexImageStack](https://github.com/quazardous/SilexImageStack)) to see it done in a few config lines in the **Silex** bootstrap.
 
 ## Credits
 [quazardous](https://github.com/quazardous).
