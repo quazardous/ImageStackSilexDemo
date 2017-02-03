@@ -1,0 +1,6 @@
+{
+    "require": {
+        "quazardous/silex-imagestack": "^1.1",
+        "sergiors/doctrine-cache-service-provider": "@dev"
+    }
+}
