@@ -49,8 +49,14 @@ $app->register(new ImageStackProvider(), [
                 ['@^style/small/.*$@', '300x200'],
                 ['@^style/thumb/.*$@', '100'],
                 ['@^format/([0-9]+)x([0-9]+)/.*$@', function ($macthes) { return sprintf('%sx%s', $macthes[1], $macthes[2]); }],
+                ['@^original/.*$@', true],
                 ['/.*/', false], // trigger a 404
             ],
+        ],
+        'watermark' => [
+            'driver' => 'watermark',
+            'watermark' => __DIR__ . '/resources/coffee.png',
+            'anchor' => 'bottom right',
         ],
     ],
     'image.storages.options' => [
@@ -66,7 +72,7 @@ $app->register(new ImageStackProvider(), [
     'image.stacks.options' => [
         'pexels' => [
             'backend' => 'web_final',
-            'manipulators' => 'thumbnails',
+            'manipulators' => ['thumbnails', 'watermark'],
             'storage' => 'img',
         ],
     ],
